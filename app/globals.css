@@ -22,5 +22,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Gunakan font sans bawaan Next.js agar lebih profesional dibanding Arial */
+  font-family: var(--font-sans), system-ui, sans-serif;
+  /* Tambahkan transisi halus jika nanti kamu pakai Dark Mode toggle */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Helper class untuk container agar konten tidak mentok ke pinggir layar */
+.container-custom {
+  @apply max-w-5xl mx-auto px-6;
 }
